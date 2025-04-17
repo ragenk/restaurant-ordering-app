@@ -15,6 +15,7 @@ paymentForm.addEventListener("submit", function (e) {
         <p class="order-complete-msg">Thanks, ${fullName}! Your order is on its way!</p>
     </div>`;
 
+  clearCart(orderArray);
   closeModal();
 });
 
@@ -40,6 +41,10 @@ document.addEventListener("click", function (e) {
 
 function closeModal() {
   modal.style.display = "none";
+}
+
+function clearCart(arr) {
+  arr.length = 0;
 }
 
 function getMenuItems() {
